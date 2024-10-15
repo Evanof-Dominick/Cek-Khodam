@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Kodam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #777;
+        }
+
+        .js-nama {
+            width: calc(100% - 40px);
+            height: 35px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .js-khodam {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Website Cek Khodam</h1>
+        <h2>Dibuat oleh: Vanto Sigma Skibidi</h2>
+        <p>
+            Masukkan Nama:
+            <input placeholder="Nama Anda" class="js-nama" type="text">
+        </p>
+        <button onclick="cekKhodam()">Cek Khodam Kalian</button>
+        <p class="js-khodam"></p>
+    </div>
+
+    <script>
+        function cekKhodam() {
+            const inputnama = document.querySelector(".js-nama");
+            const nama = inputnama.value;
+            let khodam = "";
+            const number = Math.random();
+
+            if (number < 0.1) {
+                khodam = "rawa rontek";
+            } else if (number < 0.2) {
+                khodam = "shotgun api";
+            } else if (number < 0.3) {
+                khodam = "bekicot RGB";
+            } else if (number < 0.4) {
+                khodam = "bantal anime";
+            } else if (number < 0.5) {
+                khodam = "keris khas jawa";
+            } else if (number < 0.6) {
+                khodam = "kipas rusak";
+            } else if (number < 0.8) {
+                khodam = "tuyul coding";
+            } else if (number < 0.9) {
+                khodam = "kuyang salto";
+            } else {
+                khodam = "biawak mewing";
+            }
+
+            inputnama.value = '';
+            document.querySelector(".js-khodam").innerHTML = `${nama} khodamnya ${khodam}`;
+        }
+    </script>
+</body>
+</html>
